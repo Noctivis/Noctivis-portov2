@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-no-repeat bg-cover bg-center bg-fixed bg-primary">
+    <div
+      class="hidden w-full absolute top-0 left-0 p-4 md:flex justify-between font-display"
+    >
+      <div class="rounded-md bg-[#FDB97C] p-2">
+        <h6 id="date">April 10 2020</h6>
+      </div>
+      <div class="rounded-md bg-[#FDB97C] p-2">
+        <h6 id="time">UTC TIME</h6>
+      </div>
+      <div class="rounded-md bg-[#FDB97C] p-2">
+        <h6 class="day">ヾ(＠⌒ー⌒＠)ノ</h6>
+      </div>
+    </div>
+    <!-- main section -->
+    <div
+      class="hidden container mx-auto mt-16 md:mt-24 lg:mt-40"
+      id="container"
+    >
+      <div class="flex flex-row items-center justify-center px-6">
+        <div
+          class="md:max-w-7xl bg-[#FDB97C] rounded-2xl opacity-90 border-yellow-200 flex flex-col gap-6 md:justify-center"
+        >
+          <!-- close , minimize , etc here -->
+          <div
+            class="relative w-full h-5 flex flex-row justify-end pt-4 pr-4"
+            id="cme"
+          >
+            <div class="flex flex-row gap-2 justify-end">
+              <button type="button" class="" onclick="hideContent()">
+                <div
+                  class="w-4 h-4 bg-[#FFA500] rounded-xl hover:bg-yellow-600"
+                ></div>
+              </button>
+              <button type="button" class="" onclick="">
+                <div
+                  class="w-4 h-4 bg-[#0EDB0E] rounded-xl hover:bg-green-600"
+                ></div>
+              </button>
+              <button type="button" class="" onclick="hideContent()">
+                <div
+                  class="w-4 h-4 bg-[#FF0000] rounded-xl hover:bg-red-600"
+                ></div>
+              </button>
+            </div>
+          </div>
+          <!-- profile picture and name -->
+          <div
+            class="flex flex-col lg:flex-row items-center justify-center font-display gap-6 md:gap-0"
+          >
+            <div class="flex md:px-4 items-center justify-center md:mb-11">
+              <img
+                src="/img/crown.webp"
+                class="w-44 md:w-56 lg:w-52 rounded-full"
+              />
+            </div>
+            <div
+              class="md:max-w-[630px] flex flex-col items-center justify-center"
+            >
+              <div class="mb-6 w-full">
+                <h1
+                  class="font-extrabold text-3xl text-center md:text-4xl lg:text-left lg:px-6 lg:-mt-7"
+                >
+                  <span
+                    class="lg:text-5xl bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
+                    >Fattah</span
+                  >
+                  Al Mahdi
+                </h1>
+                <h3
+                  class="text-center font-extrabold lg:px-6 lg:text-2xl lg:text-left"
+                >
+                  web developer
+                </h3>
+              </div>
+              <p class="px-6 font-extrabold lg:text-xl">
+                Hi, I am Fattah Al Mahdi Currently a student in Senior High
+                School and member of
+                <span
+                  class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
+                  >IMPHNEN</span
+                >
+              </p>
+            </div>
+          </div>
+          <p
+            class="px-6 font-display mb-4 font-bold leading-relaxed md:max-w-3xl md:text-balance lg:max-w-4xl lg:text-xl lg:mb-20 lg:leading-loose"
+          >
+            In my dreams, technology is a milestone for a better world. Through
+            my projects, I try to turn dreams into reality. Currently, I am
+            learning about Fullstack by self-teaching. Let's create a better
+            future together.check my latest project in my github see ya!
+          </p>
+          <!-- social media -->
+          <div class="px-6 flex w-full justify-between mb-6">
+            <a href="/blog"><img src="/img/terminal.svg" alt="" /></a>
+
+            <div class="flex gap-2 w-full justify-center">
+              <a href="#"><img width="24px" src="/img/gmail.svg" alt="" /></a>
+              <a href="#"
+                ><img width="24px" src="/img/linkedin.svg" alt=""
+              /></a>
+              <a href="#"><img width="24px" src="/img/github.svg" alt="" /></a>
+              <a href="#"
+                ><img width="24px" src="/img/instagram.svg" alt=""
+              /></a>
+            </div>
+
+            <button type="button">
+              <img width="24px" src="/img/bard-line.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main section -->
+    <div
+      class="w-full fixed flex justify-center bottom-6 hover:scale-125 hover:duration-75"
+    >
+      <button
+        type="button"
+        class="bg-[#FDB97C] p-4 rounded-full relative"
+        onclick="showContent()"
+        id="love"
+      >
+        <span class="text-2xl">❤️</span>
+      </button>
+    </div>
+    <h6
+      class="text-center fixed bottom-0 left-0 right-0 z-10 lg:text-xl"
+      style="color: white; font-size: 10px"
+    >
+      Licensed under MIT License· Project source code available on GitHub Repo
+    </h6>
+
+    <script>
+      const container = document.getElementById("container");
+      const love = document.getElementById("love");
+      const time = document.getElementById("time");
+      const date = document.getElementById("date");
+      const day = document.getElementById("day");
+      let week = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      time.innerHTML = new Date().toLocaleTimeString();
+      date.innerHTML = new Date().toLocaleDateString();
+      const weeks = week[new Date().getDay()];
+      day.innerHTML = String(weeks);
+      function showContent() {
+        container.classList.remove("hidden");
+        love.classList.remove("flex");
+        love.classList.add("hidden");
+      }
+      function hideContent() {
+        container.classList.add("hidden");
+        love.classList.remove("hidden");
+        love.classList.add("flex");
+      }
+    </script>
+  </body>
+</html>
